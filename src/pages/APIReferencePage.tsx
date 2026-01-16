@@ -39,7 +39,7 @@ export default function APIReferencePage({ darkMode }: APIReferencePageProps) {
 
   const handleDownloadPostman = () => {
     const link = document.createElement('a');
-    link.href = '/postman/CRM_Banking_APIs.postman_collection.json';
+    link.href = import.meta.env.BASE_URL + 'postman/CRM_Banking_APIs.postman_collection.json';
     link.download = 'CRM_Banking_APIs.postman_collection.json';
     link.click();
   };

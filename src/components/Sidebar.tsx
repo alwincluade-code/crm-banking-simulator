@@ -26,7 +26,7 @@ const iconMap: Record<string, React.ReactNode> = {
 };
 
 export default function Sidebar({ selectedApp, setSelectedApp, collapsed, setCollapsed }: SidebarProps) {
-  const [autoCollapse, setAutoCollapse] = useState<NodeJS.Timeout | null>(null);
+  const [autoCollapse, setAutoCollapse] = useState<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     if (!collapsed) {

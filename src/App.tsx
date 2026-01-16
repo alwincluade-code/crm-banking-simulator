@@ -26,7 +26,7 @@ function App() {
   }, [darkMode]);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/crm-banking-simulator">
       <div className={`min-h-screen ${darkMode ? 'bg-surface-dark text-text-primary-dark' : 'bg-surface-light text-text-primary-light'}`}>
         <Header
           darkMode={darkMode}

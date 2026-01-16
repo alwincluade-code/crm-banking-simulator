@@ -260,14 +260,12 @@ function JourneyStepCard({
   return (
     <div
       className={`card cursor-pointer transition-all duration-300 ${
-        isActive ? 'ring-2 ring-offset-2' : ''
-      } ${isCompleted ? 'opacity-75' : ''} ${
-        darkMode ? 'bg-surface-card-dark' : ''
-      }`}
+        isCompleted ? 'opacity-75' : ''
+      } ${darkMode ? 'bg-surface-card-dark' : ''}`}
       style={{
         borderLeftWidth: '4px',
         borderLeftColor: isActive ? appColor : isCompleted ? '#10B981' : 'transparent',
-        ringColor: isActive ? appColor : undefined
+        boxShadow: isActive ? `0 0 0 2px white, 0 0 0 4px ${appColor}` : undefined
       }}
       onClick={onClick}
     >
